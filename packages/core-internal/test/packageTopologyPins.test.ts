@@ -55,8 +55,9 @@ const PUBLIC_PACKAGES: Record<string, { name: string; exportKeys: string[]; bin?
         name: '@modelcontextprotocol/core',
         // './internal' is the wholesale internal seam the sibling SDK packages resolve at
         // runtime (their bundles keep `@modelcontextprotocol/core/internal` imports external);
-        // it is not public API — the curated public surface stays the root entry.
-        exportKeys: ['.', './internal']
+        // it is not public API. './protocol' is the curated public seam for the
+        // role-neutral protocol engine used by non-client/server SDK packages.
+        exportKeys: ['.', './internal', './protocol']
     },
     codemod: {
         name: '@modelcontextprotocol/codemod',
