@@ -4,7 +4,8 @@
     "exclude": ["node_modules", "dist"],
     "compilerOptions": {
         "paths": {
-            "*": ["./*"]
+            "*": ["./*"],
+            "@modelcontextprotocol/core/internal": ["./src/internal.ts"]
         }
     }
 }

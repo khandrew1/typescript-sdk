@@ -40,12 +40,25 @@
                 "types": "./dist/internal.d.cts",
                 "default": "./dist/internal.cjs"
             }
+        },
+        "./protocol": {
+            "import": {
+                "types": "./dist/protocol.d.mts",
+                "default": "./dist/protocol.mjs"
+            },
+            "require": {
+                "types": "./dist/protocol.d.cts",
+                "default": "./dist/protocol.cjs"
+            }
         }
     },
     "typesVersions": {
         "*": {
             "internal": [
                 "dist/internal.d.mts"
+            ],
+            "protocol": [
+                "dist/protocol.d.mts"
             ]
         }
     },
