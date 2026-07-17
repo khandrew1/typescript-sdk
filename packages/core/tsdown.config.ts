@@ -18,6 +18,15 @@ export default defineConfig({
     target: 'esnext',
     platform: 'neutral',
     dts: {
-        resolver: 'tsc'
-    }
+        resolver: 'tsc',
+        compilerOptions: {
+            baseUrl: '.',
+            paths: {
+                '@modelcontextprotocol/core-internal': ['../core-internal/src/index.ts'],
+                '@modelcontextprotocol/core-internal/public': ['../core-internal/src/exports/public/index.ts']
+            }
+        }
+    },
+    noExternal: ['@modelcontextprotocol/core-internal'],
+    external: ['@modelcontextprotocol/core/internal']
 });
